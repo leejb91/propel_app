@@ -13,8 +13,7 @@ function editData() {
 }
 
 function editUser(user) {
-
-    $.ajax({
+  $.ajax({
     type: 'PUT',
     url: 'http://localhost:3000/users/' + user.id ,
     data: {editData}
