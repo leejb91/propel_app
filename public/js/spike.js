@@ -1,22 +1,12 @@
-var request = require('request');
+console.log("LOADED SPIKE")
 
-
-function editData() {
-  var user = {
-    firstName:   $("#edit-fn").val(),
-    lastName:    $("#edit-ln").val(),
-    email:       $("#edit-email").val(),
-    institution: $("#edit-institution").val(),
-    location:    $("#edit-location").val()
-  }
-  return user;
-}
 
 function editUser(user) {
+  console.log("CLICK");
   $.ajax({
     type: 'PUT',
-    url: 'http://localhost:3000/users/' + user.id ,
-    data: {editData}
+    url: "/users/" + userId,
+    data: user
   }).then(function(user){
     console.log(user);
   })
@@ -24,5 +14,16 @@ function editUser(user) {
 
 // jQuery
 $(function() {
-  $('#submit-edit').on('submit', editUser);
+  $divEl = $('div');
+  $('#submit-edit').on('click', function() {
+    var user = {
+      firstName:   $("#edit-fn").val(),
+      lastName:    $("#edit-ln").val(),
+      email:       $("#edit-email").val(),
+      institution: $("#edit-institution").val(),
+      location:    $("#edit-location").val()
+    };
+
+    editUser(user);
+  });
 })

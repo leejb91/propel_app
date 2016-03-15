@@ -6,7 +6,7 @@ var index = function(req, res, next){
     if (err) {
       res.json({message: err});
     } else {
-      res.render('users/index', {users: users});
+      res.json(users);
     }
   });
 };
@@ -30,7 +30,8 @@ var edit = function(req, res, next){
     } else if (!user) {
       res.json({message: 'No user with this id.'});
     } else {
-      res.render('users/edit', { user: user });
+      console.log("EDIT CONTROLLER", user);
+      res.json(user);
     }
   });
 };

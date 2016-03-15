@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>PROPEL</title>
+<%- include('../partials/head') %>
 
 <!--bootstrap-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
@@ -36,9 +37,10 @@
           <li class="active"><a href="#">About</a></li>
           <li><a href="#">Team</a></li>
           <% if (user) { %>
-          <li><a href="/logout">Logout</a></li>
+          <li id="<%= user._id %>"><a href="/logout">Logout</a></li>
           <% } else { %>
-          <li><a href="/auth/linkedin">Log<img src="assets/images/linkedinlogo.png" id="linkedinlogo"></a></li>
+          <li><a href="/auth/linkedin">Sign up | Log</a></li>
+          <li><a href="/auth/linkedin"><img src="assets/images/linkedinlogo.png" id="linkedinlogo"></a></li>
           <% } %>
         </ul>
       </div>
@@ -164,7 +166,7 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 </body>
-<script src='js/main.js'></script>
+<%- include('../partials/scripts') %>
 <!--jquery-->
 <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
 <!--bootstrap-->

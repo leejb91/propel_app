@@ -3,14 +3,27 @@
 <head>
   <%- include('../partials/head') %>
 </head>
+
+<script>
+
+</script>
 <body>
   <%- include('../partials/header', { subHeading: user.firstName + "'s Profile" }) %>
 
   <main>
-    <p>Name:   <%= user.firstName %></p>
+    <div id="<%= user._id %>">
+    <form action="submit" id="userform">
+      First Name: <input type="text" name="first_name" value="<%= user.firstName %>" id="edit-fn"><br>
+      Last Name: <input type="text" name="last_name" value="<%= user.lastName %>" id="edit-ln"><br>
+      Email: <input type="text" name="email" value="<%= user.email %>" id="edit-email"><br>
+      Institution: <input type="text" name="institution" id="edit-institution"><br>
+      Location: <input type="text" name="location" id="edit-location">
+      <button type="submit" id="submit-edit">Submit</button>
+    </form>
+    </div>
     <p><a href="/users">Back to the user list.</a></p>
   </main>
-
   <%- include('../partials/scripts') %>
+
 </body>
 </html>
