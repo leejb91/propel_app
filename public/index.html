@@ -5,54 +5,45 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>PROPEL</title>
 
-//bootstrap
+<!--bootstrap-->
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-//skeleton
+<!--skeleton-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" rel="stylesheet">
-//materialize
+<!--materialize-->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.css" rel="stylesheet">
-//animate.css
+<!--animate.css-->
 <link href="https://cdn.jsdelivr.net/animatecss/3.5.1/animate.min.css" rel="stylesheet">
-//landing page css
+<!--landing page css-->
 <link href="css/landingpage.css" rel="stylesheet">
+<!--navbar css-->
+<link href="css/navbar.css" rel="stylesheet">
+
 </head>
 
 <body>
 
     <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
-        <div class="container topnav">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand topnav" href="#">PROPEL</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#services">Team</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Log In</a>
-                    </li>
-                    <li>
-                        <a href="#services">Sign Up</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+<div class="landingnav" id="wholedangnavbar">
+  <nav class="navbar navbar-inverse navbar-static-top" id="wholedangnavbar">
+    <div class="container" id="propellogo">
+      <img class="navbar-brand" src="assets/images/navbarlogo.png" id="propellogo">
+
+      <div class="navbar-header" id="wholedangnavbar">
+
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse" id="wholedangnavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">About</a></li>
+          <li><a href="#">Team</a></li>
+          <li><a href="#">Sign up | Log</a></li>
+          <li><a href="#"><img src="assets/images/linkedinlogo.png" id="linkedinlogo"></a></li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+</div>
 
 
     <!-- Header -->
@@ -81,50 +72,7 @@
     </div>
     <!-- /.intro-header -->
 
-    <!-- Page Content -->
 
-  <a  name="services"></a>
-    <div class="content-section-a">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">Death to the Stock Photo:<br>Special Thanks</h2>
-                    <p class="lead">A special thanks to <a target="_blank" href="http://join.deathtothestockphoto.com/">Death to the Stock Photo</a> for providing the photographs that you see in this template. Visit their website to become a member.</p>
-                </div>
-                <div class="col-lg-5 col-lg-offset-2 col-sm-6">
-                    <img class="img-responsive" src="img/ipad.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
-    <!-- /.content-section-a -->
-
-    <div class="content-section-b">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
-                    <hr class="section-heading-spacer">
-                    <div class="clearfix"></div>
-                    <h2 class="section-heading">3D Device Mockups<br>by PSDCovers</h2>
-                    <p class="lead">Turn your 2D designs into high quality, 3D product shots in seconds using free Photoshop actions by <a target="_blank" href="http://www.psdcovers.com/">PSDCovers</a>! Visit their website to download some of their awesome, free photoshop actions!</p>
-                </div>
-                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
-                    <img class="img-responsive" src="img/dog.png" alt="">
-                </div>
-            </div>
-
-        </div>
-        <!-- /.container -->
-
-    </div>
     <!-- /.content-section-b -->
 
     <div class="content-section-a">
@@ -214,11 +162,15 @@
     <script src="js/bootstrap.min.js"></script>
 </body>
 <script src='js/main.js'></script>
-//jquery
+<!--jquery-->
 <script src="https://code.jquery.com/jquery-2.2.1.min.js" integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00=" crossorigin="anonymous"></script>
-//bootstrap JS
+<!--bootstrap-->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
 
-<script src=''></script>
+<script>
+
+$('#propellogo').addClass('slideInLeft');
+
+</script>
 </html>

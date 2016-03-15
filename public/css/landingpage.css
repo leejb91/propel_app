@@ -1,8 +1,6 @@
-/*!
- * Start Bootstrap - Landing Page Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
+/*This css section at the top goes with the landing page template
+*/
+
 
 body,
 html {
@@ -168,6 +166,10 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+
+/*below is custom css*/
+
 
 #signup {
   color:black;

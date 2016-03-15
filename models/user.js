@@ -8,8 +8,8 @@ var userSchema = new mongoose.Schema({
   firstName:                {type: String, required: true},
   lastName:                 {type: String, required: true},
   email:                    {type: String, required: true},
-  institution:              {type: String, required: true},
-  location:                 {name: String, countryCode: String}
+  institution:              {type: String},
+  location:                 {type: String, countryCode: String}
 });
 
 // creating an instance method for the userSchema

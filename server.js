@@ -3,6 +3,8 @@ var path         = require('path');
 var favicon      = require('serve-favicon');
 var logger       = require('morgan');
 var bodyParser   = require('body-parser');
+var session      = require('express-session');
+var passport     = require('passport');
 var debug        = require('debug')('app:http');
 var cookieParser = require('cookie-parser');
 
@@ -10,6 +12,10 @@ var cookieParser = require('cookie-parser');
 var env      = require('./config/environment'),
     mongoose = require('./config/database'),
     routes   = require('./config/routes');
+
+//
+require('dotenv').load();
+require('./config/passport');
 
 // Instantiate a server application.
 var app = express();
@@ -33,7 +39,18 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cookieParser('notsosecretnowareyou'));
 
+// session middleware
+app.use(session({
+  secret: 'WDIRocks!',
+  resave: false,
+  saveUninitialized: true
+}));
 // Routing layers: favicon, static assets, dynamic routes, or 404…
+
+//for passport JS to work
+app.use(passport.initialize());
+app.use(passport.session());
+
 
 // Routes to static assets. Uncomment below if you have a favicon.
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
