@@ -11,5 +11,6 @@ router.get('/', pagesController.welcome);
 // users resource paths:
 router.get('/users',     usersController.index);
 router.get('/users/:id', usersController.show);
+router.get('/users/edit/:id', usersController.edit);
 
 module.exports = router;
