@@ -4,7 +4,8 @@ var User = require('../models/user');
 
 module.exports = {
   questionIndex: questionIndex,
-  questionCreate: questionCreate
+  questionCreate: questionCreate,
+  questionDelete: questionDelete
 };
 
 
@@ -21,5 +22,13 @@ function questionIndex(req, res, next){
   });
 }
 
-function questionCreate(res, req, next){}
+function questionCreate(req, res, next) {}
+
+function questionDelete(req, res){
+  Classroom.findByIdAndUpdate(this._id, {
+    $pull: {
+      questions: {_id: questions._id}
+    }
+  }, cb);
+}
 
